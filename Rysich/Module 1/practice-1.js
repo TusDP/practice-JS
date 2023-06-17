@@ -264,21 +264,50 @@
 
 
 
+
+
+
+
 //TODO: 11 ===================================
 //Даний рядок, що складається із символів, наприклад, 'abcde'.
 // Перевірте, що першим символом цього рядка є буква 'a'.
 // Якщо це так - виведіть 'так', інакше виведіть 'ні'.
 
 // const str = 'abcde';
+// if (str[0] === 'a') {
+//   console.log('Yes');
+// } else {
+//   console.log('No');
+// }
+
+
+
+
 
 
 
 
 
 //TODO: 12 ===================================
-//Якщо число ділитися на 3 повертати
-//fizz якщо ділитися на 5 повертати buzz
+//Якщо число ділитися на 3 повертати fizz якщо ділитися на 5 повертати buzz
 //Якщо ділитися на 3 і на 5 повернути fizzbuzz
+
+// const mainNumber = parseInt(prompt('Введіть число:'))
+// if (isNaN(mainNumber)) {  //isNaN, щоб переконатися, що введене значення є дійсним числом
+//   console.log('Введіть коректне число!');
+// } else if (mainNumber % 3 === 0 && mainNumber % 5 === 0) {
+//   console.log('fizzbuzz');
+// } else if(mainNumber % 5 === 0) {
+//   console.log('buzz');
+// } else if (mainNumber % 3 === 0) {
+//   console.log('fizz');
+// } else {
+//   console.log('wrong number(((');
+// }
+
+
+
+
 
 
 
@@ -304,6 +333,25 @@
 //   default:
 //     alert('We hope that this page looks ok!');
 // }
+////////////////
+// REFACTOR/////
+////////////////
+// const browser = 'Edge';
+
+// if (browser === 'Edge') {
+//   alert("You've got the Edge!");
+// } else if 
+//   (browser === 'Opera' 
+//     || browser === 'Chrome' 
+//     || browser === 'Firefox'
+//     || browser === 'Safari') {
+//   alert('Okay we support these browsers too');
+// } else {
+//   alert('We hope that this page looks ok!');
+// }
+
+
+
 
 
 
@@ -315,6 +363,17 @@
 // приклад: ф-ція fillArray(3, 'a') повинна повертати масив ['a', 'a', 'a']
 
 
+// function fillArray (quantity, item) {
+//   let arr = [];
+//   for (let i = 0; i < quantity; i += 1) {
+//     arr.push(item)
+//   }
+//   return arr
+// }
+
+// console.log(fillArray(5, 'b'));
+
+
 
 
 
@@ -323,7 +382,7 @@
 // Написати ф-цію, яка прибиратиме з масиву всі значення, які перетворюються на false
 // undefined, null, false, '', 0, NaN
 
-// const array = [
+// const items = [
 //   1,
 //   0,
 //   54,
@@ -341,6 +400,17 @@
 // ];
 
 
+// function clearArray (array) {
+//   let newClearedArray = [];
+//   for (let item of array) {
+//     if (item) {
+//       newClearedArray.push(item)
+//     }   
+//   }
+//   return newClearedArray
+// }
+
+// console.log(clearArray(items));
 
 
 
@@ -358,4 +428,21 @@
 // const arr6 = [6, 324, 'dream', -30, 9, 8, 34, 'color', 4, 232, 0, 'list', 11];
 
 // const arr7 = [1, 4, 6, 'color', 324, 232, 'list', 11, 9, 'dream', 34, 0, -30];
-// const arr8 = [6, 'dream', -30, 10, 9, 1, 324, 34, 'color', 4, 232, 0, 'list'];
+// const arr8 = [6, 'dream', -30, 11, 9, 1, 324, 34, 'color', 4, 232, 0, 'list'];
+
+
+// function compareArray (array1, array2) {
+//  if (array1.length !== array2.length) {
+//   return false
+//  }
+
+//  for(let i = 0; i < array1.length; i += 1) {
+//   if (array1[i] !== array2[i]) {
+//     return false
+//   }
+//  }
+//  return true
+// }
+
+// console.log(compareArray(arr2, arr8));
+
