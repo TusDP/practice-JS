@@ -193,16 +193,37 @@
 // Робити перевірку,що користувач ввів саме число, а не довільний набір 
 // символів, не потрібно.
 
-const numberInput = prompt('Буль-ласка введіть число'); 
-let total = 0;
 
-if (numberInput === null) {
-  const individualNumbers = numberInput.split('');
-  for (let i = 0; i < individualNumbers.length; i += 1) {
-    total += Number(individualNumbers[i]);
-  } 
-}
-  alert(`Загальна сума введених чисел дорівнює ${total}`)
+
+// Варіант №1 додає числа, які введені за один раз в інпуті при натисканні ОК
+// const numberInput = prompt('Буль-ласка введіть число'); 
+// let total = 0;
+
+// if (!null) {
+//   const individualNumbers = numberInput.split('');
+//   for (let i = 0; i < individualNumbers.length; i += 1) {
+//     total += Number(individualNumbers[i]);
+//   } 
+// }
+//   alert(`Загальна сума введених чисел дорівнює ${total}`)
+
+
+
+// Варіант №2 додає числа, які введені через "OK"
+// let total = 0;
+
+// while(true) {
+//   const numberInput = prompt('Буль-ласка введіть число'); 
+  // if (numberInput === null) {
+  //   break
+  // }
+//   const number = parseFloat(numberInput);
+//   total += number; 
+// }
+  
+// alert("Сума чисел: " + total);
+
+
 
 
 
@@ -217,6 +238,26 @@ if (numberInput === null) {
 // Цикл має питати число, поки відвідувач не
 // введе число більше 100, або натисне кнопку
 // скасування в prompt
+
+
+// const input = prompt('Введіть число більше 100...');
+
+// if (input <= 100) {
+//   alert('Введене число не відповідає умові. Введіть число більше за 100!');
+// } else {
+//   alert(`Вітаю! Число ${input} відповідає заданим параметрам`);
+// }
+
+// let input;
+// do {input = prompt('Введіть число більше 100...')
+// } while (input <= 100 && input !== null)
+
+// if (input === null) {
+//   alert('Введення скасовано.');
+// } else {
+//   alert(`Вітаю! Число ${input} відповідає заданим параметрам.`);
+// }
+
 
 
 
