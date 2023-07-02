@@ -214,14 +214,30 @@
 
 // while(true) {
 //   const numberInput = prompt('Буль-ласка введіть число'); 
-  // if (numberInput === null) {
-  //   break
-  // }
+//   if (numberInput === null) {
+//     break
+//   }
 //   const number = parseFloat(numberInput);
 //   total += number; 
 // }
   
 // alert("Сума чисел: " + total);
+//=======================
+//Варіант №3 аналог варіанту 2
+let input;
+let total = 0;
+
+while (input !== null) {
+  input = prompt('Введите число...');
+
+  if (isNaN(Number(input))) {
+    alert('Было введено не число, попробуйте еще раз');
+  } else {
+    total += Number(input);
+  }
+}
+
+alert(`Общая сумма чисел равна ${total}`);
 
 
 

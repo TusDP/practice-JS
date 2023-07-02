@@ -269,13 +269,13 @@ const filmoteka = [
   // }
 
   // Варіант №2 через метод "typeof":
-  function minNumber (a, b) {
-    let message;
-    if (typeof a !== 'number' || typeof b !== 'number') {
-      return message = 'Введені аргументи не є числом';
-    }
-    return a > b ? b : a
-  }
+  // function minNumber (a, b) {
+  //   let message;
+  //   if (typeof a !== 'number' || typeof b !== 'number') {
+  //     return message = 'Введені аргументи не є числом';
+  //   }
+  //   return a > b ? b : a
+  // }
 
 // Варіант №3 з розбивкою по кожному параметру та перевіркою
 //     function minNumber (a, b) {
@@ -288,11 +288,11 @@ const filmoteka = [
 //     return a > b ? b : a
 //   }
 
-  console.log(minNumber(2, 8));
-  console.log(minNumber(15, 2));
-  console.log(minNumber(2374, 134));
-  console.log(minNumber('awda', 134));
-  console.log(minNumber(5, 'rdrf'));
+  // console.log(minNumber(2, 8));
+  // console.log(minNumber(15, 2));
+  // console.log(minNumber(2374, 134));
+  // console.log(minNumber('awda', 134));
+  // console.log(minNumber(5, 'rdrf'));
 // //?
 
 
