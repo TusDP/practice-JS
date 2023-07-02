@@ -261,14 +261,23 @@ const filmoteka = [
 //? Answer
 // Варіант №1 простий
   // function minNumber (a, b) {
-  //   if (Number.isNaN(Number(a)) || Number.isNaN(Number(b))) {
+  //   if (isNaN(a) || isNaN(b)) {
   //     return 'Введені аргументи не є числом';
   //   }
 
   //   return a > b ? b : a
   // }
 
-// Варіант №2 з розбивкою по кожному параметру та перевіркою
+  // Варіант №2 через метод "typeof":
+  function minNumber (a, b) {
+    let message;
+    if (typeof a !== 'number' || typeof b !== 'number') {
+      return message = 'Введені аргументи не є числом';
+    }
+    return a > b ? b : a
+  }
+
+// Варіант №3 з розбивкою по кожному параметру та перевіркою
 //     function minNumber (a, b) {
 //     if (Number.isNaN(Number(a))) {
 //       return `Введений аргумент "${a}" не є числом`;
@@ -279,11 +288,11 @@ const filmoteka = [
 //     return a > b ? b : a
 //   }
 
-//   console.log(minNumber(2, 8));
-//   console.log(minNumber(15, 2));
-//   console.log(minNumber(2374, 134));
-//   console.log(minNumber('awda', 134));
-//   console.log(minNumber(5, 'rdrf'));
+  console.log(minNumber(2, 8));
+  console.log(minNumber(15, 2));
+  console.log(minNumber(2374, 134));
+  console.log(minNumber('awda', 134));
+  console.log(minNumber(5, 'rdrf'));
 // //?
 
 
@@ -294,21 +303,21 @@ const filmoteka = [
 
 //TODO:=============task-6=================
 // напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
-const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
 
 //? Answer
 
-function sumAdjacentNumbers (arr) {
-  let newArray = [];
+// function sumAdjacentNumbers (arr) {
+//   let newArray = [];
 
-  for (let i = 0; i < arr.length -1; i ++) {
-    const sum = arr[i] + arr[i + 1] // обчислюємо суму поточного числа arr[i] та його наступного числа arr[i + 1] 
-    newArray.push(sum)
-  }  
-  return newArray
-}
+//   for (let i = 0; i < arr.length -1; i ++) {
+//     const sum = arr[i] + arr[i + 1] // обчислюємо суму поточного числа arr[i] та його наступного числа arr[i + 1] 
+//     newArray.push(sum)
+//   }  
+//   return newArray
+// }
 
-console.log(sumAdjacentNumbers(someArr)) // [33, 45, 39, 17, 25, 27, 29]
+// console.log(sumAdjacentNumbers(someArr)) // [33, 45, 39, 17, 25, 27, 29]
 
 
 //?
@@ -332,17 +341,17 @@ console.log(sumAdjacentNumbers(someArr)) // [33, 45, 39, 17, 25, 27, 29]
 //Нумерація елементів має починатися з першого.
 //['Джаз', 'Блюз', 'Рок-н-рол', 'Реггі', 'Реп']
 
-const musicGenres = ['Джаз', 'Блюз', 'Рок-н-рол', 'Реггі', 'Реп'];
+// const musicGenres = ['Джаз', 'Блюз', 'Рок-н-рол', 'Реггі', 'Реп'];
 
 //? Answer
 
-  function logItems (array) {
-    for (let i = 0, j = 1; i < array.length; i += 1, j += 1) {
-      console.log(`${j} - ${array[i]}`);
-    }
-  }
+//   function logItems (array) {
+//     for (let i = 0, j = 1; i < array.length; i += 1, j += 1) {
+//       console.log(`${j} - ${array[i]}`);
+//     }
+//   }
 
-logItems(musicGenres);
+// logItems(musicGenres);
 
 //?
 
@@ -362,14 +371,14 @@ logItems(musicGenres);
 // якщо довжина перевищує значення параметрі maxLength.
 
 //? Answer
-function formatMessage(message, maxLength) {
-  const rst = message.slice(0, maxLength)
-  return rst
-}
+// function formatMessage(message, maxLength) {
+//   const rst = message.slice(0, maxLength)
+//   return rst
+// }
 
-//?
+// //?
 
-console.log(formatMessage('Curabitur ligula sapien', 16)); //Повертає 'Curabitur ligula...'.
-console.log(formatMessage('Curabitur ligula sapien', 23)); //Повертає 'Curabitur ligula sapien'.
-console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 15)); //Повертає 'Nunc sed turpis...'.
-console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 41)); //Повертає 'Nunc sed turpis a felis in nunc fringilla'.
+// console.log(formatMessage('Curabitur ligula sapien', 16)); //Повертає 'Curabitur ligula...'.
+// console.log(formatMessage('Curabitur ligula sapien', 23)); //Повертає 'Curabitur ligula sapien'.
+// console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 15)); //Повертає 'Nunc sed turpis...'.
+// console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 41)); //Повертає 'Nunc sed turpis a felis in nunc fringilla'.
